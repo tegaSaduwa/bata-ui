@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer py-20 bg-purple-50 grid grid-cols-4 gap-4 p-5">
       <div className="pt-5">
         <span className="self-center text-xl whitespace-nowrap dark:text-white font-extrabold text-indigo-900">
-          bata-ui
+           <span>bata-</span><span className="text-pink-700">ui</span>
         </span>
         <p className="opacity-50">
           Free Component library For utility first CSS frameworks

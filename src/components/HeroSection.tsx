@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div>
       {" "}
-      <div className="lg:px-9 bg-gradient-to-br text-white from-indigo-900 via-purple-500 to-pink-300 text-primary-content -mt-[4rem] grid place-items-center items-end pt-20">
+      <div className="lg:px-9 bg-gradient-to-bl text-white from-indigo-900 via-purple-700 to-pink-500 text-primary-content -mt-[4rem] grid place-items-center items-end pt-20">
         <div className="lg:px-20 pt-5 hero-content col-start-1 row-start-1 w-full max-w-7xl flex-col justify-between gap-10 pb-40 lg:flex-row lg:items-end lg:gap-0 xl:gap-20">
           <div className="lg:pl-10 lg:pb-32">
             <div className="mb-2 py-4 text-center lg:py-10 lg:text-left antialiased">
@@ -50,7 +50,7 @@ const HeroSection = () => {
               <div className="rounded-md shadow">
                 <a
                   href="/components"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-indigo-400 md:py-4 md:text-lg md:px-10"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-700 hover:bg-purple-400 md:py-4 md:text-lg md:px-10"
                 >
                   See Components
                 </a>

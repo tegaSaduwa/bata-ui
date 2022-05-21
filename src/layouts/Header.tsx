@@ -21,7 +21,7 @@ const Header = () => {
               href="/"
               className="self-center text-xl whitespace-nowrap dark:text-white font-extrabold text-indigo-900 ml-2"
             >
-              bata-ui
+               <span>bata-</span><span className="text-pink-700">ui</span>
             </a>
           </span>
           <Popover>
@@ -52,7 +52,7 @@ const Header = () => {
                         href="/"
                         className="self-center text-xl whitespace-nowrap dark:text-white font-extrabold text-indigo-900"
                       >
-                        bata-ui
+                         <span>bata-</span><span className="text-pink-700">ui</span>
                       </a>
                     </div>
                     <div className="-mr-2">
