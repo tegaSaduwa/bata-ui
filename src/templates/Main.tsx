@@ -1,56 +1,24 @@
 //import Link from 'next/link';
-import type { ReactNode } from 'react';
+import HeroSection from "@/components/HeroSection";
+import Footer from "@/layouts/Footer";
+import Header from "@/layouts/Header";
+import type { ReactNode } from "react";
 
 //import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
   meta: ReactNode;
-  children: ReactNode;
 };
 
 const Main = (props: IMainProps) => (
-  <div className="">
+  <>
     {props.meta}
-    <div className="">
-    
-
-        {/* navv <div>
-          <ul className="flex flex-wrap text-xl">
-            <li className="mr-6">
-              <Link href="/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link href="/about/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <a
-                className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                GitHub
-              </a>
-            </li>
-          </ul>
-        */}
-      {/* header here */}
-
-      </div>
-
-      <div className="content py-5 text-xl">{props.children}</div>
-
-      {/* footer here */}
-
-   
-    
-  </div>
+    <Header />
+    <div>
+      <HeroSection />
+      <Footer />
+    </div>
+  </>
 );
 
 export { Main };

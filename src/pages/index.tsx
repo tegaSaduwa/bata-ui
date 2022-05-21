@@ -1,22 +1,23 @@
 //import { useRouter } from 'next/router';
-import Header from "@/layouts/Header";
-import HeroSection from "@/components/HeroSection";
-import Footer from "@/layouts/Footer";
+import { Meta } from "@/layouts/Meta";
+import { Main } from "@/templates/Main";
 
 const Index = () => {
   // const router = useRouter();
 
   return (
     <>
-      <Header />
-      <div className="">
-        <HeroSection />
-        <Footer />
+    <Main meta={
+        <Meta
+          title="bata-ui"
+          description=""
+        />
+      } />
         {/*  <img
           src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
           alt="Nextjs starter banner"
         /> */}
-      </div>
+      
     </>
   );
 };
