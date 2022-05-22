@@ -1,66 +1,115 @@
 import React from "react";
+import {
+  DownloadIcon,
+  DocumentTextIcon,
+  ColorSwatchIcon,
+  CogIcon,
+} from "@heroicons/react/outline";
+import SidebarLink from "@/ui-elements/SidebarLink";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto border-r">
-      <h2 className="text-3xl font-semibold text-center text-blue-800">Logo</h2>
+    <div className="flex flex-col w-96 h-screen px-5 py-5 overflow-y-auto border-r bg-gray-50 overflow-scroll">
+      <h2>
+        <a
+          href="/"
+          className="text-xl whitespace-nowrap dark:text-white font-extrabold text-indigo-900 pl-3"
+        >
+          <span>bata-</span>
+          <span className="text-pink-700">ui</span>
+        </a>
+      </h2>
 
-      <div className="flex flex-col justify-between mt-6">
+      <div className="flex flex-col justify-between mt-5">
         <aside>
           <ul>
-            <li>
-              <a
-                className="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-md "
-                href="#"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  />
-                </svg>
+            <SidebarLink url="#" name="Install">
+              <DownloadIcon className="h-6 w-6 ml-1 mr-1" aria-hidden="true" />
+            </SidebarLink>
 
-                <span className="mx-4 font-medium">Dashboard</span>
-              </a>
-            </li>
+            <SidebarLink url="#" name="Typography">
+              <DocumentTextIcon
+                className="h-6 w-6 ml-1 mr-1"
+                aria-hidden="true"
+              />
+            </SidebarLink>
 
-            <li>
-              <a
-                className="flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
-                href="#"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
+            <SidebarLink url="#" name="Color">
+              <ColorSwatchIcon
+                className="h-6 w-6 ml-1 mr-1"
+                aria-hidden="true"
+              />
+            </SidebarLink>
 
-                <span className="mx-4 font-medium">Settings</span>
-              </a>
-            </li>
+            <SidebarLink url="#" name="Config">
+              <CogIcon className="h-6 w-6 ml-1 mr-1" aria-hidden="true" />
+            </SidebarLink>
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Actions
+            </small>
+            <SidebarLink url="#" name="Button" />
+            <SidebarLink url="#" name="Dropdown" />
+            <SidebarLink url="#" name="Modal" />
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Data Display
+            </small>
+            <SidebarLink url="#" name="Alert" />
+            <SidebarLink url="#" name="Avater" />
+            <SidebarLink url="#" name="Card" />
+            <SidebarLink url="#" name="Carousel" />
+            <SidebarLink url="#" name="Collapse" />
+            <SidebarLink url="#" name="Progress" />
+            <SidebarLink url="#" name="Radial" />
+            <SidebarLink url="#" name="Stat" />
+            <SidebarLink url="#" name="Table" />
+            <SidebarLink url="#" name="Tooltip" />
+
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Data Input
+            </small>
+            <SidebarLink url="#" name="Checkbox" />
+            <SidebarLink url="#" name="Text Input" />
+            <SidebarLink url="#" name="Radio" />
+            <SidebarLink url="#" name="Range" />
+            <SidebarLink url="#" name="Rating" />
+            <SidebarLink url="#" name="Select" />
+            <SidebarLink url="#" name="Textarea" />
+            <SidebarLink url="#" name="Toggle" />
+
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Layout
+            </small>
+            <SidebarLink url="#" name="Art board" />
+            <SidebarLink url="#" name="Button Group" />
+            <SidebarLink url="#" name="Divider" />
+            <SidebarLink url="#" name="Drawer" />
+            <SidebarLink url="#" name="Footer" />
+            <SidebarLink url="#" name="Hero" />
+            <SidebarLink url="#" name="Indicator" />
+            <SidebarLink url="#" name="Input Group" />
+
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Navigation
+            </small>
+            <SidebarLink url="#" name="Bread Crumbs" />
+            <SidebarLink url="#" name="Link" />
+            <SidebarLink url="#" name="Menu" />
+            <SidebarLink url="#" name="Navbar" />
+            <SidebarLink url="#" name="Pagination" />
+            <SidebarLink url="#" name="Steps" />
+            <SidebarLink url="#" name="Tab" />
+
+            <hr className="bg-gray-400 my-3 mx-2" />
+            <small className="text-xl whitespace-nowrap dark:text-white text-sm font-medium text-indigo-900 pl-3 mb-5">
+              Mockup
+            </small>
+            <SidebarLink url="#" name="Code" />
+            <SidebarLink url="#" name="Window" />
           </ul>
         </aside>
       </div>

@@ -1,6 +1,6 @@
-import SecondHeroSection from "@/ui/CleanCodeDescription";
-import HighlyCustomizableDescription from "@/ui/HighlyCustomizableDescription";
-import InstallBataUIDescription from "@/ui/InstallBataUIDescription";
+import SecondHeroSection from "@/ui-elements/CleanCodeDescription";
+import HighlyCustomizableDescription from "@/ui-elements/HighlyCustomizableDescription";
+import InstallBataUIDescription from "@/ui-elements/InstallBataUIDescription";
 import React from "react";
 import Stroke from "../layouts/Stroke";
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
                   href="#"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                 >
-                  How to use
+                  Get Started
                 </a>
               </div>
             </div>
