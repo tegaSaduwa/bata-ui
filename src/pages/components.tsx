@@ -8,7 +8,7 @@ const Components = () => {
   useEffect(() => {
     setMockdata(data);
   }, []);
-  console.log(mockdata);
+
   return (
     <>
       <div className="flex">
@@ -29,9 +29,9 @@ const Components = () => {
           </div>
 
        
-            <div className={`grid grid-cols-3 gap-4`}>
-              {mockdata.map(({ title, description, img }) => (
-                <Card img={img} title={title} description={description} />
+            <div className={`grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4`}>
+              {mockdata.map(({ title, description, img, id }) => (
+                <Card img={img} title={title} description={description} key={id} />
               ))}
            
           </div>
