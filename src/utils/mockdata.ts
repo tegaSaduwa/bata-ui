@@ -56,7 +56,7 @@ export const data:any = [
   {
     id: 10,
     img: "http://via.placeholder.com/640x360",
-    title: "Input",
+    title: "Textare",
     description: "Alert informs users about important Events",
   },
   {
@@ -74,7 +74,7 @@ export const data:any = [
   {
     id: 13,
     img: "http://via.placeholder.com/640x360",
-    title: "Input",
+    title: "InputGroup",
     description: "Alert informs users about important Events",
   },
 ];
