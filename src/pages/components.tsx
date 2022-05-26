@@ -1,3 +1,4 @@
+import ComponentsHeader from "@/layouts/ComponentsHeader";
 import Sidebar from "@/layouts/Sidebar";
 import Card from "@/ui-elements/Card";
 import React, { useEffect, useState } from "react";
@@ -15,11 +16,7 @@ const Components = () => {
         <Sidebar />
         <div className="w-full h-screen overflow-scroll">
           <div className="p-9">
-            <input
-              type="search"
-              placeholder="search..."
-              className="px-2 text-xl w-64 outline-none text-dark font-normal border-gray-700"
-            />
+            <ComponentsHeader />
 
             <div className="flex items-center">
               <br></br>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer py-20 bg-purple-50 grid grid-cols-4 gap-4 p-5">
+    <footer className="footer py-20 bg-purple-50 grid grid-cols-4 gap-4 p-5 px-56">
       <div className="pt-5">
         <span className="self-center text-xl whitespace-nowrap dark:text-white font-extrabold text-indigo-900">
            <span>bata-</span><span className="text-pink-700">ui</span>

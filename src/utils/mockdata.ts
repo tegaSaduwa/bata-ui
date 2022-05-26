@@ -1,4 +1,4 @@
-export const data:any = [
+export const data: any = [
   {
     id: 1,
     img: "http://via.placeholder.com/640x360",
@@ -52,12 +52,56 @@ export const data:any = [
     img: "http://via.placeholder.com/640x360",
     title: "Text Area",
     description: "Alert informs users about important Events",
+    componentsProperties: [
+      {
+        className: "alert area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+    ],
   },
   {
     id: 10,
     img: "http://via.placeholder.com/640x360",
     title: "Textare",
     description: "Alert informs users about important Events",
+    componentsProperties: [
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+      {
+        className: "text area-magic",
+        type: "component",
+        des: "describing what it takes",
+      },
+    ],
   },
   {
     id: 11,
@@ -76,5 +120,47 @@ export const data:any = [
     img: "http://via.placeholder.com/640x360",
     title: "InputGroup",
     description: "Alert informs users about important Events",
+  },
+];
+
+export const componentsProperties: any = [
+  {
+    className: "text area-magic",
+    type: "component",
+    des: "describing what it takes",
+  },
+  {
+    className: "text area-magic",
+    type: "component",
+    des: "describing what it takes",
+  },
+
+  {
+    className: "text area-magic",
+    type: "component",
+    des: "describing what it takes",
+  },
+];
+
+export const componentPreview: any = [
+  {
+    previewHeading: "dummytext",
+    previewImg: "just some image",
+    previewCode: "<>just some sample <>",
+  },
+  {
+    previewHeading: "dummytext Color",
+    previewImg: "just some image",
+    previewCode: "<>just some sample <>",
+  },
+  {
+    previewHeading: "dummytext Position",
+    previewImg: "just some image",
+    previewCode: "<>just some sample <>",
+  },
+  {
+    previewHeading: "dummytext Style",
+    previewImg: "just some image",
+    previewCode: "<>just some sample <>",
   },
 ];
