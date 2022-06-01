@@ -52,56 +52,12 @@ export const data: any = [
     img: "http://via.placeholder.com/640x360",
     title: "Text Area",
     description: "Alert informs users about important Events",
-    componentsProperties: [
-      {
-        className: "alert area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-    ],
   },
   {
     id: 10,
     img: "http://via.placeholder.com/640x360",
     title: "Textare",
     description: "Alert informs users about important Events",
-    componentsProperties: [
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-      {
-        className: "text area-magic",
-        type: "component",
-        des: "describing what it takes",
-      },
-    ],
   },
   {
     id: 11,

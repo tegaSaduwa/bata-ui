@@ -1,23 +1,28 @@
 import ComponentsHeader from "@/layouts/ComponentsHeader";
 import ComponentUse from "@/ui-elements/PreviewComponent";
-import React, { ReactNode, useState, useEffect } from "react";
-import { componentPreview, componentsProperties } from "../utils/mockdata";
+import { AppConfig } from "@/utils/AppConfig";
+import axios from "axios";
+import React, { ReactNode } from "react";
+import { dehydrate, QueryClient, useQuery } from "react-query";
+// import { componentPreview, componentsProperties, data } from "../utils/mockdata";
 
 type IComponentsLayout = {
   heading: ReactNode;
-  // title: ReactNode;
-  // description: ReactNode;
-  // href: ReactNode;
+};
+
+const getAllPropertiesData = async () => {
+  const res = await axios.get(`${AppConfig.baseUrl}/componentsProperties`);
+  return res.data;
+};
+
+const getAllPreviewData = async () => {
+  const res = await axios.get(`${AppConfig.baseUrl}/componentPreview`);
+  return res.data;
 };
 
 const ComponentsLayout = (props: IComponentsLayout) => {
-  const [previewdata, setpreviewdata] = useState([]);
-  const [cproperties, setCproperties] = useState([]);
-
-  useEffect(() => {
-    setpreviewdata(componentPreview);
-    setCproperties(componentsProperties);
-  }, []);
+  const { data: properties } = useQuery("properties", getAllPropertiesData);
+  const { data: preview } = useQuery("preview", getAllPreviewData);
 
   return (
     <div className="w-full h-screen overflow-scroll">
@@ -44,7 +49,7 @@ const ComponentsLayout = (props: IComponentsLayout) => {
               </tr>
             </thead>
             <tbody>
-              {cproperties?.map((property: any) => (
+              {properties?.map((property: any) => (
                 <tr>
                   <td className="border px-7 py-3"> {property.className}</td>
                   <td className="border px-7 py-3">
@@ -59,7 +64,7 @@ const ComponentsLayout = (props: IComponentsLayout) => {
           </table>
           ​
           <div className="mt-5">
-            {previewdata?.map((property: any) => (
+            {preview?.map((property: any) => (
               <ComponentUse
                 heading={property.previewHeading}
                 preview={property.previewImg}
@@ -74,3 +79,15 @@ const ComponentsLayout = (props: IComponentsLayout) => {
 };
 
 export default ComponentsLayout;
+
+export async function getStaticProps() {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery("properties", getAllPropertiesData);
+  await queryClient.prefetchQuery("preview", getAllPreviewData);
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+}

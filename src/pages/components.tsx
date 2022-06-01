@@ -1,14 +1,17 @@
 import ComponentsHeader from "@/layouts/ComponentsHeader";
 import Sidebar from "@/layouts/Sidebar";
 import Card from "@/ui-elements/Card";
-import React, { useEffect, useState } from "react";
-import { data } from "../utils/mockdata";
+import { AppConfig } from "@/utils/AppConfig";
+import { dehydrate, QueryClient, useQuery } from "react-query";
+import axios from "axios";
+
+const getAllData = async () => {
+  const res = await axios.get(`${AppConfig.baseUrl}/batadata`);
+  return res.data;
+};
 
 const Components = () => {
-  const [mockdata, setMockdata] = useState([]);
-  useEffect(() => {
-    setMockdata(data);
-  }, []);
+  const { data } = useQuery("bata", getAllData);
 
   return (
     <>
@@ -28,13 +31,13 @@ const Components = () => {
             <div
               className={`grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4`}
             >
-              {mockdata.map(({ title, description, img, id }) => (
+              {data.map((property: any) => (
                 <Card
-                  img={img}
-                  title={title}
-                  description={description}
-                  key={id}
-                  href={`/components/${title}`}
+                  img={property.img}
+                  title={property.title}
+                  description={property.description}
+                  key={property.id}
+                  href={`/components/${property.title}`}
                 />
               ))}
             </div>
@@ -46,3 +49,14 @@ const Components = () => {
 };
 
 export default Components;
+
+export async function getStaticProps() {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery("bata", getAllData);
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+}
